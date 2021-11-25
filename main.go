@@ -14,6 +14,7 @@ import (
 	"golang.org/x/crypto/md4"
 
 	"github.com/urfave/cli/v2"
+	"golang.org/x/crypto/ripemd160"
 )
 
 func main() {
@@ -78,6 +79,10 @@ func main() {
 					fmt.Printf("%x\n", sha512.Sum384(bytesToHash))
 				case "SHA-512":
 					fmt.Printf("%x\n", sha512.Sum512(bytesToHash))
+				case "RIPEMD-160":
+					h := ripemd160.New()
+					io.WriteString(h, stringToHash)
+					fmt.Printf("%x\n", h.Sum(nil))
 				}
 				return nil
 			},
