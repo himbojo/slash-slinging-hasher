@@ -125,7 +125,7 @@ func main() {
 				}
 				fmt.Println(app.Commands[1].HelpName, providedHash, hashType, wordList)
 				duration := time.Since(startTime)
-				fmt.Println(word)
+				fmt.Printf("Password: %v\n", word)
 				fmt.Printf("Words Checked: %v, Elapsed Time: %v\n", wordsChecked, duration)
 				return nil
 			},
