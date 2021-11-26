@@ -4,6 +4,7 @@
 *.dll
 *.so
 *.dylib
+slash-slinging-hasher*
 
 # Test binary, built with `go test -c`
 *.test
